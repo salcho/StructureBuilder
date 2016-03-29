@@ -1,14 +1,8 @@
-package com.imaginaryworld.ui;
+package com.imaginaryworld.ui.scene;
 
-import com.imaginaryworld.*;
 import com.sun.j3d.exp.swing.JCanvas3D;
-import com.sun.j3d.utils.universe.PlatformGeometry;
-import com.sun.j3d.utils.universe.SimpleUniverse;
 
-import javax.media.j3d.*;
 import javax.swing.*;
-import javax.vecmath.Point3d;
-import javax.vecmath.Vector3f;
 import java.awt.event.*;
 
 public class UniverseViewer{
@@ -22,5 +16,14 @@ public class UniverseViewer{
     private JButton runUniverseButton;
     private JButton refreshViewButton;
     public JCanvas3D canvas;
-    private JPanel panel2;
+
+    public UniverseViewer() {
+        runUniverseButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                //runUniverse();
+            }
+        });
+    }
 }
